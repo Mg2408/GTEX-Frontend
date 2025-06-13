@@ -46,7 +46,7 @@ const { useToken } = theme;
 const { useBreakpoint } = Grid;
 
 export default function PrivateNavbar() {
-  const {theme} = useMetaData();
+  const { theme } = useMetaData();
   const { token } = useToken();
   const screens = useBreakpoint();
   const navigate = useNavigate();
@@ -107,7 +107,7 @@ export default function PrivateNavbar() {
           <Text>Manage your Account</Text>
         </Button>
       </AccountManagementButtonStyle>
-    
+
     </div>
   );
 
@@ -119,14 +119,14 @@ export default function PrivateNavbar() {
   const handleNotificationOpen = (newOpen) => {
     setOpen(newOpen)
   }
-  
+
   const notificationContent = (
-   
+
     <div>
       <img className="image" src={notificationImage}></img>
-      <p className={`${theme==='dark'?'sigin-title-dark':'sigin-title'}`}>Tasks/Notifications <a onClick={() => handleRedirection()}><img src={redirect} /></a></p>   
+      <p className={`${theme === 'dark' ? 'sigin-title-dark' : 'sigin-title'}`}>Tasks/Notifications <a onClick={() => handleRedirection()}><img src={redirect} /></a></p>
       <Card className="notification-card">
-        
+
       </Card>
     </div>
   )
@@ -137,28 +137,38 @@ export default function PrivateNavbar() {
       icon: <HomeIcon />,
     },
     {
-      label: "Product",
       key: "dashboard",
-      children: [
-        {
-            label: "Commercial Property",
-            key: "commercialProperty",
-          }
-      ]
+
+      label: "ABOUT US"
     },
     {
-      label: "Programs",
-      key: "SubMenu",
-      children: [
-        {
-          label: "Vacant Buildings",
-          key: "vacantBuildings",
-        },
-        
-      ],
+      key: "accountdashboard",
+
+      label: "WHAT WE DO"
     },
-    
+    {
+      key: "accountinfo",
+
+      label: "CLIENT STORIES"
+    },
+    {
+      key: "createsubmission",
+
+      label: "RESOURSES"
+    },
+    {
+      key: "createsubmission",
+
+      label: "CAREERS"
+    },
+    {
+      key: "createsubmission",
+
+      label: "CONTACT US"
+    },
+
   ];
+
 
   const [current, setCurrent] = useState("projects");
   const onClick = (e) => {
@@ -170,32 +180,10 @@ export default function PrivateNavbar() {
     } else if (e.key == 'commercialProperty') {
       navigate('/commercialProperty');
     }
-      else if (e.key == 'vacantBuildings') {
-        navigate('/vacantBuildings');
-      } else if (e.key == 'flood') {
-        navigate('/flood');
-    } else if (e.key == 'documents') {
-      navigate('/uploadDocuments');
-    } else if (e.key == 'searchpolicy') {
-      navigate('/search-policy')
-    } else if (e.key == 'reportingAnalytics') {
-      navigate('/reporting-analytics')
-    } else if (e.key == 'customer') {
-      navigate('/customer-details')
-    } else if (e.key == 'claim') {
-      navigate('/search-claim')
-    } else if (e.key == 'commissions') {
-      navigate('/commissions')
-    } else if (e.key == 'admin') {
-      navigate('/admin')
-    } else if (e.key == 'homeowners') {
-      navigate('/home-owners')
-    } else if (e.key == 'cyber') {
-      navigate('/upload-file')
-    } else if (e.key == 'automaticquote') {
-      navigate('/automatic-quote');
-    }else if (e.key == 'bulkquote') {
-      navigate('/bulk-quote');
+    else if (e.key == 'vacantBuildings') {
+      navigate('/vacantBuildings');
+    } else if (e.key == 'flood') {
+      navigate('/flood');
     }
   };
 
@@ -240,25 +228,29 @@ export default function PrivateNavbar() {
     <NavbarHeader theme={theme}>
       <Container>
         <nav>
-          <div style={styles.headercard}>
-            <div style={styles.menuContainer}>
+          <div style={{ display: 'flex', alignItems: 'center', width: '100%' }}>
+            <div style={{ flex: '0 0 auto' }}>
               <a href="#">
-                {
-                  theme === 'dark'? <img src={novoLogo} />:<img src={novoLogo} />
-                }
-                
+                <img src={novoLogo} alt="logo" style={{height:"50px"}} />
               </a>
+            </div>
+            <div style={{ flex: '1', display: 'flex', justifyContent: 'flex-end' }}>
               <Menu
                 style={styles.menu}
                 mode="horizontal"
                 items={menuItems}
                 onClick={onClick}
-                selectedKeys={screens.md ? [current] : ""}
+                selectedKeys={[current]}
                 overflowedIndicator={
-                  <Button color="#fff" type="text" icon={<MenuOutlined style={{color: theme == 'dark' ? "#fff" : "#000"}} />}></Button>
+                  <Button
+                    color="#fff"
+                    type="text"
+                    icon={<MenuOutlined style={{ color: theme === 'dark' ? "#fff" : "#000" }} />}
+                  />
                 }
               />
             </div>
+
             <Space>
               <div
                 className="search-box search"
@@ -267,9 +259,9 @@ export default function PrivateNavbar() {
                 <div className="search-feild">
                   <span className="search-icons">
                     {
-                      theme === 'dark'?<img src={SearchIconDark} />:<img src={SearchIcon} />
+                      theme === 'dark' ? <img src={SearchIconDark} /> : <img src={SearchIcon} />
                     }
-                    
+
                   </span>
 
                   <input type="text" placeholder="Search" />
@@ -303,9 +295,9 @@ export default function PrivateNavbar() {
               content={notificationContent}
               trigger="click"
               overlayStyle={{
-                height:150,
-                maxWidth: 450, 
-                padding: 0, 
+                height: 150,
+                maxWidth: 450,
+                padding: 0,
               }}
               overlayClassName={theme === 'dark' ? 'custom-pophover-dark-notification' : ''}
             >

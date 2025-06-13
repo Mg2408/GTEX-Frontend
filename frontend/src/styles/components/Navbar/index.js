@@ -1,64 +1,55 @@
 import styled from "styled-components";
 export const NavbarHeader = styled.div`
-  border-bottom: 1px solid #f0efef;
-  box-shadow: 0px 4px 10px 0px #0000000f;
-  .search-box {
+  background-color: #252525;
+  padding: 10px 0;
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .ant-menu-horizontal {
+    background: transparent;
+    border-bottom: none;
+    margin-left: auto; /* aligns menu items to the right */
+  }
+
+  .ant-menu {
     display: flex;
     align-items: center;
-    gap: 14px;
-    &.search{
-      justify-content:flex;
-      padding:15px 0px;
-    }
-    .search-feild {
-      position: relative;
-      .search-icons {
-        position: absolute;
-        top: 12px;
-        left: 7px;
-      }
-    }
-    .usericon {
-      width: 30px !important;
-      height: 30px !important;
-      display: inline-block;
-      img {
-        object-fit: cover;
-        width: 100%;
-        object-fit: cover;
-        height: auto;
-        border-radius: 50%;
-      }
-    }
-   input {
-      border-radius: 25px;
-      border: ${({ theme }) => (theme === 'dark' ? '1px solid #A2A1A1' : '1px solid #f3f2f2')};
-      padding: 13px 20px 13px 45px;
-      outline: none;
-      box-shadow: 13.49px 22.77px 27.83px 0px #0000000d;
-      background-color: ${({ theme }) => (theme === 'dark' ? '#3F3F3F' : '')};
-    }
   }
-  .ant-menu-title-content {
-    color: #9c9c9f;
-    font-size: 14px;
-    font-weight: 500;
-    font-family:Plus-Jakarta-Sans;
-  }
+
   .ant-menu-item {
-    padding: 0 10px;
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 14px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    padding: 0 20px;
+    height: 64px;
+    line-height: 64px;
   }
-  .ant-menu-submenu,
-  .ant-menu-item,
+
   .ant-menu-item-selected {
-    &:hover:after {
-      content: none !important;
-    }
-    &:after {
-      content: none !important;
-    }
+    border-bottom: 2px solid #e1473d;
+    color: #ffffff;
+  }
+
+  .ant-menu-title-content {
+    color: #ffffff;
+  }
+
+  a img {
+    height: 55px;
+    display: block;
+  }
+
+  .search-box {
+    display: none;
   }
 `;
+
+
 export const PublicHeader = styled.div`
   // background-color: #fff;
   border-bottom: 1px solid #f0efef;
