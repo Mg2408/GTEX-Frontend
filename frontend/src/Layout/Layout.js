@@ -1,14 +1,7 @@
 import React from "react";
 import { Layout } from "antd";
 import Header from "../components/Header/Header";
-import {
-  StyledFooter,
-  FooterContent,
-  FooterRight,
-  FooterSocial,
-  FooterCopyright,
-  FooterTagline,
-} from '../components/Footer';
+import PrivateFooter from '../components/Footer/PrivateFooter';
 
 
 
@@ -56,9 +49,8 @@ const CustomLayout = () => {
         </Routes> */}
       </Content>
 
-      <StyledFooter>
-        <FooterContent />
-      </StyledFooter>
+      <PrivateFooter >
+      </PrivateFooter>
 
 
     </Layout>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { FaFacebookF, FaTwitter, FaGoogle } from 'react-icons/fa';
-import { Section } from '../styles/pages/login';
+import { Section } from '../../styles/pages/Login';
 
 const Login = () => {
     const navigate = useNavigate();
@@ -16,7 +16,7 @@ const Login = () => {
             <div className="login-container">
                 <div className="login-box">
                     <div className="login-left">
-                        <img src={require("../../src/assets/profile.png")} alt="Avatar" className="avatar-img" />
+                        <img src={require("../../assets/images/profile.png")} alt="Avatar" className="avatar-img" />
                         <div className="welcome-text">
                             <h2>Welcome</h2>
                             <p>Please login to access the system.</p>

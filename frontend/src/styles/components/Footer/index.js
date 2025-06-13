@@ -1,73 +1,80 @@
 import styled from "styled-components";
 
 export const PrivateFooterbox = styled.div`
-  
-  background-color:${({ theme }) => (theme === 'dark' ? '#656566' : '#054f7d')};
-  border-radius: 20px 20px 0px 0px;
-  padding: 40px 0px 20px;
+  background-color: #1f1f1f;
+  padding: 60px 0 20px;
+  color: #fff;
+
   ul {
     list-style: none;
-    padding-left: 0px;
+    padding-left: 0;
+    margin: 0;
+
     li {
-      margin-bottom: 10px;
-      padding: 0;
-    }
-    li a {
-      width: 75%;
-      display: block;
+      margin-bottom: 8px;
       font-size: 14px;
-      padding: 5px 10px;
-      font-weight: 500;
-      line-height: 17.64px;
-      color: #fff;
+
+      a {
+        color: #ccc;
+        text-decoration: none;
+
+        &:hover {
+          color: #e1473d;
+        }
+      }
+
       b {
-        font-weight: 700;
+        font-weight: 600;
+        font-size: 14px;
+        display: inline-block;
+        margin-top: 10px;
+        color: #ffffff;
       }
     }
-    li.active {
+  }
+
+  .inner-list {
+    padding-left: 0;
+    li {
+      margin-bottom: 5px;
     }
-    li.active a,
-    li:hover a {
-      background: #fff;
-      border-radius: 10px;
-      color: #2e2e48;
+  }
+
+  .footer-contact {
+    text-align: left;
+    img {
+      height: 50px;
+      margin-bottom: 10px;
+    }
+    p {
+      margin: 5px 0;
+      font-size: 14px;
+      color: #ccc;
+    }
+    .linkedin-icon {
+      display: inline-block;
+      margin-top: 10px;
+      font-size: 22px;
+      color: white;
+
+      &:hover {
+        color: #e1473d;
+      }
     }
   }
-  .copyright-text {
-    text-align: center;
-    color: #fff;
-    display: block;
-    padding: 35px 0px 0px;
-  }
-`;
-export const PublicFooterBox = styled.div`
- background-color:${({ theme }) => (theme === 'dark' ? '#656566' : '#054f7d')};
-   .footersection {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .copyrightsection {
-    display: flex;
-    align-items: center;
-    gap: 17px;
-    button {
-      background-color: #1169a0;
-      border: 1px solid #1169a0;
-      border-radius: 5px;
+
+  .footer-bottom {
+    padding-top: 40px;
+    .copyright {
+      font-size: 12px;
       color: #fff;
-      padding: 9px 15px;
-      cursor: pointer;
     }
-    a {
-      font-size: 13px;
-      color: #fff;
+    .red-line {
+      width: 100%;
+      height: 4px;
+      background-color: #e1473d;
+      margin-top: 10px;
     }
   }
 `;
 
-export const Container = styled.div`
-  max-width: 1220px;
-  padding: 28px 20px;
-  margin: 0 auto;
-`;

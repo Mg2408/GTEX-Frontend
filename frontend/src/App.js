@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import CustomLayout from './Layout/Layout';
 import themes from "../src/constants/theme.json";
 
-import Login from './pages/login';
+import Login from '../src/pages/Login';
 
 function App() {
   const currentTheme= 'light';
