@@ -152,17 +152,17 @@ export default function PrivateNavbar() {
       label: "CLIENT STORIES"
     },
     {
-      key: "createsubmission",
+      key: "resources",
 
       label: "RESOURSES"
     },
     {
-      key: "createsubmission",
+      key: "careers",
 
       label: "CAREERS"
     },
     {
-      key: "createsubmission",
+      key: "contactus",
 
       label: "CONTACT US"
     },

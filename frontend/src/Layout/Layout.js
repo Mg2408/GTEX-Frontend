@@ -2,6 +2,7 @@ import React from "react";
 import { Layout } from "antd";
 import Header from "../components/Header/Header";
 import PrivateFooter from '../components/Footer/PrivateFooter';
+import LandingSection from "./LandingSection";
 
 
 
@@ -28,25 +29,15 @@ const CustomLayout = () => {
       <Header />
 
       <Content
-
         style={{
-          padding: "20px",
-          // backgroundImage: "url(bg1.jpg)",
-          //  backgroundSize:"cover",
-
+          padding: "0px",
+          background: "transparent",
           borderRadius: "10px",
-          boxShadow: "0 2px 8px rgba(0, 0, 0, 0.1)",
-          margin: "0px 0", // Margin above and below the content
-          flex: 1, // Allows Content to grow and fill remaining height
+          margin: "0px 0",
+          flex: 1,
         }}
-
       >
-        {/* <Routes>
-          <Route path="/commercialProperty" element={<PropertyStepper/>} />
-          <Route path="/vacantBuildings" element={<NewProgram/>} />
-         
-          
-        </Routes> */}
+        <LandingSection />
       </Content>
 
       <PrivateFooter >
