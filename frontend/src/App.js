@@ -13,8 +13,8 @@ function App() {
     <ThemeProvider theme={{ theme: currentTheme }}>
     <Router>
       <Routes>
-        <Route path="/" element={<Login />} />
-        <Route path="/*" element={<CustomLayout />} />
+      
+        <Route path="/" element={<CustomLayout />} />
         
       </Routes>
     </Router>

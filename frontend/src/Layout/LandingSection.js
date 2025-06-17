@@ -1,9 +1,11 @@
 import React from "react";
 import SolutionsSection from "../pages/Solutions/CardSections";
+import { Container } from "../styles/components/Layout";
 
 const LandingSection = () => {
   return (
-    <div>
+    <Container>
+
       {/* Top Section: Text + Right Image */}
       <div
         style={{
@@ -55,16 +57,14 @@ const LandingSection = () => {
         }}
       >
         <div style={{ maxWidth: "60%" }}>
-          <h1 style={{ fontSize: "36px", fontWeight: "bold", marginBottom: "20px" }}>
-            ExaRTA – Exavalu's Rapid Test Automation Framework
+          <h1 style={{ fontSize: "36px", fontWeight: "bold", marginBottom: "30px" }}>
+            GT- EX  Guidewire Testing - EXavalu
           </h1>
           <p style={{ fontSize: "16px", lineHeight: "1.6", marginBottom: "30px" }}>
-            Exavalu's No-Risk POC to assess your current state and jumpstart your automation
-            journey. Partner with us to elevate your Quality Engineering practice. We are committed
-            to delivering best-in-class standards, helping you navigate the complexities of
-            Guidewire testing with confidence and precision.
+            Transform your Guidewire testing with our AI-powered, end-to-end automation platform.
+            Deliver faster releases, higher quality, and deeper insights with seamless integration across your testing lifecycle.
           </p>
-          <button
+          {/* <button
             style={{
               backgroundColor: "white",
               color: "black",
@@ -77,11 +77,13 @@ const LandingSection = () => {
             }}
           >
             Take A Complementary Maturity Assessment
-          </button>
+          </button> */}
         </div>
       </div>
-       <SolutionsSection />
-    </div>
+      <SolutionsSection />
+
+
+    </Container>
   );
 };
 

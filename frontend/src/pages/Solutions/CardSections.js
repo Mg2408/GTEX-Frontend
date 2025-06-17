@@ -23,33 +23,33 @@ const bgImages = [
 
 const solutions = [
     {
-        title: "Policy Automation",
-        description: "Automate policy validation and lifecycle workflows.",
+        title: "GenAI Based Requirements & G-Unit Tests",
+        description: "AI-powered requirements and auto-generated G-Unit tests for faster readiness.",
         icon: <AppstoreAddOutlined style={{ fontSize: "30px", color: "#1890ff" }} />,
     },
     {
-        title: "Claims Validation",
-        description: "Streamline claims testing with prebuilt scenarios.",
+        title: "Defect Pattern Analysis",
+        description: "Proactively detect and prevent defects with intelligent pattern analysis",
         icon: <FileSearchOutlined style={{ fontSize: "30px", color: "#52c41a" }} />,
     },
     {
-        title: "Billing Automation",
-        description: "Ensure billing systems are accurate and reliable.",
+        title: "BDD Based Test Automation Framework",
+        description: "Pre-built BDD packs delivering rapid, scalable Guidewire automation",
         icon: <ProfileOutlined style={{ fontSize: "30px", color: "#faad14" }} />,
     },
     {
-        title: "Integration Testing",
-        description: "Validate third-party integrations confidently.",
+        title: "Intelligent Regression",
+        description: "Targeted regression powered by business rule intelligence.",
         icon: <ThunderboltOutlined style={{ fontSize: "30px", color: "#eb2f96" }} />,
     },
     {
-        title: "Regression Suite",
-        description: "Deploy regression suites for Guidewire upgrades.",
+        title: "Performance Drift Detection Utility",
+        description: "Early detection of performance issues across releases",
         icon: <ReloadOutlined style={{ fontSize: "30px", color: "#722ed1" }} />,
     },
     {
-        title: "Performance Checks",
-        description: "Monitor performance and stability under load.",
+        title: "People and Process - GW Certified SDETs",
+        description: "Certified experts ensuring consistent, standards-driven automation.",
         icon: <LineChartOutlined style={{ fontSize: "30px", color: "#13c2c2" }} />,
     },
 ];
