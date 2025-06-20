@@ -20,37 +20,55 @@ const bgImages = [
     // performanceImg,
 ];
 
-
 const solutions = [
     {
         title: "GenAI Based Requirements & G-Unit Tests",
         description: "AI-powered requirements and auto-generated G-Unit tests for faster readiness.",
         icon: <AppstoreAddOutlined style={{ fontSize: "30px", color: "#1890ff" }} />,
+        action: () => {
+            window.open("http://127.0.0.1:5002/test", "_blank");
+        }
     },
     {
         title: "Defect Pattern Analysis",
         description: "Proactively detect and prevent defects with intelligent pattern analysis",
         icon: <FileSearchOutlined style={{ fontSize: "30px", color: "#52c41a" }} />,
+        action: () => {
+            window.open("http://127.0.0.1:5002/defect", "_blank");
+        }
     },
     {
         title: "BDD Based Test Automation Framework",
         description: "Pre-built BDD packs delivering rapid, scalable Guidewire automation",
         icon: <ProfileOutlined style={{ fontSize: "30px", color: "#faad14" }} />,
+        action: () => {
+            window.open("http://127.0.0.1:5002/jira", "_blank");
+        }
     },
     {
         title: "Intelligent Regression",
         description: "Targeted regression powered by business rule intelligence.",
         icon: <ThunderboltOutlined style={{ fontSize: "30px", color: "#eb2f96" }} />,
+        action: () => {
+            window.open("http://127.0.0.1:5000", "_blank");
+        }
     },
     {
         title: "Performance Drift Detection Utility",
         description: "Early detection of performance issues across releases",
         icon: <ReloadOutlined style={{ fontSize: "30px", color: "#722ed1" }} />,
+        action: () => {
+            window.open("http://127.0.0.1:5002/performance", "_blank");
+        }
     },
     {
         title: "People and Process - GW Certified SDETs",
         description: "Certified experts ensuring consistent, standards-driven automation.",
         icon: <LineChartOutlined style={{ fontSize: "30px", color: "#13c2c2" }} />,
+        action: () => {
+            console.log("People and Process - GW Certified SDETs clicked");
+            // Add your navigation logic here for this card
+        }
     },
 ];
 
@@ -73,7 +91,6 @@ const CardsWrapper = styled.div`
     grid-template-columns: 1fr;
   }
 `;
-
 
 const Card = styled.div`
   background-image: url(${(props) => props.bg});
@@ -148,12 +165,11 @@ const SolutionCards = () => {
         <CardsWrapper>
             {solutions.map((item, index) => (
                 <Card key={index} bg={bgImages[index % bgImages.length]}>
-
                     <Overlay>
                         <IconWrapper>{item.icon}</IconWrapper>
                         <Title>{item.title}</Title>
                         <Description>{item.description}</Description>
-                        <ActionLink>Click Here</ActionLink>
+                        <ActionLink onClick={item.action}>Click Here</ActionLink>
                     </Overlay>
                 </Card>
             ))}

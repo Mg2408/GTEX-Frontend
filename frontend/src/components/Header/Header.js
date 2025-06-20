@@ -20,7 +20,7 @@ import {
 import SearchIcon from "../../../src/assets/images/search-icon.png";
 import SearchIconDark from "../../../src/assets/images/share.png";
 import ProfileIcon from "../../../src/assets/images/profile_img.png";
-import novoLogo from '../../../src/assets/images/exavalu.png';
+import novoLogo from '../../../src/assets/images/Gt-Exlogo.png';
 import {
   NavbarHeader,
   Container,
@@ -139,33 +139,24 @@ export default function PrivateNavbar() {
     {
       key: "dashboard",
 
-      label: "ABOUT US"
+      label: "Demo/Videos"
     },
     {
       key: "accountdashboard",
 
-      label: "WHAT WE DO"
+      label: "Case Studies/Success Stories"
     },
     {
       key: "accountinfo",
 
-      label: "CLIENT STORIES"
+      label: "Team & Expertise"
     },
     {
       key: "resources",
 
-      label: "RESOURSES"
+      label: "Resources"
     },
-    {
-      key: "careers",
 
-      label: "CAREERS"
-    },
-    {
-      key: "contactus",
-
-      label: "CONTACT US"
-    },
 
   ];
 
@@ -225,18 +216,19 @@ export default function PrivateNavbar() {
   };
 
   return (
-    <NavbarHeader theme={theme}>
+    <NavbarHeader theme={theme} style={{ backgroundColor: "#4a4747" }}>
+
       <Container>
         <nav>
           <div style={{ display: 'flex', alignItems: 'center', width: '100%' }}>
             <div style={{ flex: '0 0 auto' }}>
               <a href="#">
-                <img src={novoLogo} alt="logo" style={{height:"50px"}} />
+                <img src={novoLogo} alt="logo" style={{ height: "60px",width:"150px" }} />
               </a>
             </div>
             <div style={{ flex: '1', display: 'flex', justifyContent: 'flex-end' }}>
               <Menu
-                style={styles.menu}
+                style={{ ...styles.menu, fontSize: "20px" }}
                 mode="horizontal"
                 items={menuItems}
                 onClick={onClick}
