@@ -33,7 +33,7 @@ const solutions = [
     icon: <RobotOutlined style={{ fontSize: "30px", color: "#1890ff" }} />,
     bgImages: genai,
     action: () => {
-      window.open("http://127.0.0.1:5002/test", "_blank");
+      window.open("http://127.0.0.1:5001", "_blank");
     }
   },
   {
@@ -78,7 +78,7 @@ const solutions = [
     icon: <TeamOutlined style={{ fontSize: "30px", color: "#13c2c2" }} />,
     bgImages: people,
     action: () => {
-      window.open("http://127.0.0.1:5001", "_blank");
+      window.open("http://127.0.0.1:5002/test", "_blank");
       // Add your navigation logic here for this card
     }
   },
@@ -178,7 +178,7 @@ const ActionLink = styled.button`
 
 const SolutionCards = () => {
   return (
-    <CardsWrapper>
+    <CardsWrapper >
       {solutions.map((item, index) => (
         <Card key={index} bg={item.bgImages}>
           <Overlay>
