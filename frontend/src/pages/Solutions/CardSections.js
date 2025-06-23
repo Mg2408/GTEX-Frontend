@@ -1,75 +1,87 @@
 import React from "react";
 import styled from "styled-components";
 import {
-    AppstoreAddOutlined,
-    FileSearchOutlined,
-    ProfileOutlined,
-    ThunderboltOutlined,
-    ReloadOutlined,
-    LineChartOutlined,
+  RobotOutlined,         
+  BugOutlined,           
+  CodeOutlined,           
+  ThunderboltOutlined,    
+  DashboardOutlined,      
+  TeamOutlined,
 } from "@ant-design/icons";
-import policyImg from "../../assets/images/images69.jpeg"
+import genai from "../../assets/images/GenAi.jpeg"
+import defectpattern from "../../assets/images/Defectpattern.jpeg"
+import automation from "../../assets/images/Automation.png"
+import intelligence from "../../assets/images/Intellegent.jpeg"
+import performance from "../../assets/images/performance.jpeg"
+import people from "../../assets/images/people.jpeg"
 
 // Background image URLs (replace with your actual image paths or imports)
 const bgImages = [
-    policyImg,
-    // claimsImg,
-    // billingImg,
-    // integrationImg,
-    // regressionImg,
-    // performanceImg,
+  genai,
+  defectpattern,
+  automation,
+  intelligence,
+  performance,
+  people,
+
 ];
 
 const solutions = [
-    {
-        title: "GenAI Based Requirements & G-Unit Tests",
-        description: "AI-powered requirements and auto-generated G-Unit tests for faster readiness.",
-        icon: <AppstoreAddOutlined style={{ fontSize: "30px", color: "#1890ff" }} />,
-        action: () => {
-            window.open("http://127.0.0.1:5002/test", "_blank");
-        }
-    },
-    {
-        title: "Defect Pattern Analysis",
-        description: "Proactively detect and prevent defects with intelligent pattern analysis",
-        icon: <FileSearchOutlined style={{ fontSize: "30px", color: "#52c41a" }} />,
-        action: () => {
-            window.open("http://127.0.0.1:5002/defect", "_blank");
-        }
-    },
-    {
-        title: "BDD Based Test Automation Framework",
-        description: "Pre-built BDD packs delivering rapid, scalable Guidewire automation",
-        icon: <ProfileOutlined style={{ fontSize: "30px", color: "#faad14" }} />,
-        action: () => {
-            window.open("http://127.0.0.1:5002/jira", "_blank");
-        }
-    },
-    {
-        title: "Intelligent Regression",
-        description: "Targeted regression powered by business rule intelligence.",
-        icon: <ThunderboltOutlined style={{ fontSize: "30px", color: "#eb2f96" }} />,
-        action: () => {
-            window.open("http://127.0.0.1:5000", "_blank");
-        }
-    },
-    {
-        title: "Performance Drift Detection Utility",
-        description: "Early detection of performance issues across releases",
-        icon: <ReloadOutlined style={{ fontSize: "30px", color: "#722ed1" }} />,
-        action: () => {
-            window.open("http://127.0.0.1:5002/performance", "_blank");
-        }
-    },
-    {
-        title: "People and Process - GW Certified SDETs",
-        description: "Certified experts ensuring consistent, standards-driven automation.",
-        icon: <LineChartOutlined style={{ fontSize: "30px", color: "#13c2c2" }} />,
-        action: () => {
-            console.log("People and Process - GW Certified SDETs clicked");
-            // Add your navigation logic here for this card
-        }
-    },
+  {
+    title: "GenAI Based Requirements & G-Unit Tests",
+    description: "AI-powered requirements and auto-generated G-Unit tests for faster readiness.",
+    icon: <RobotOutlined style={{ fontSize: "30px", color: "#1890ff" }} />,
+    bgImages: genai,
+    action: () => {
+      window.open("http://127.0.0.1:5002/test", "_blank");
+    }
+  },
+  {
+    title: "Defect Pattern Analysis",
+    description: "Proactively detect and prevent defects with intelligent pattern analysis",
+    icon: <BugOutlined style={{ fontSize: "30px", color: "#52c41a" }} />,
+    bgImages: defectpattern,
+    action: () => {
+      window.open("http://127.0.0.1:5002/defect", "_blank");
+    }
+  },
+  {
+    title: "BDD Based Test Automation Framework",
+    description: "Pre-built BDD packs delivering rapid, scalable Guidewire automation",
+    icon: <CodeOutlined style={{ fontSize: "30px", color: "#faad14" }} />,
+    bgImages: automation,
+    action: () => {
+      window.open("http://127.0.0.1:5002/jira", "_blank");
+    }
+  },
+  {
+    title: "Intelligent Regression",
+    description: "Targeted regression powered by business rule intelligence.",
+    icon: <ThunderboltOutlined style={{ fontSize: "30px", color: "#eb2f96" }} />,
+    bgImages: intelligence,
+    action: () => {
+      window.open("http://127.0.0.1:5000", "_blank");
+    }
+  },
+  {
+    title: "Performance Drift Detection Utility",
+    description: "Early detection of performance issues across releases",
+    icon: <DashboardOutlined style={{ fontSize: "30px", color: "#722ed1" }} />,
+    bgImages: performance,
+    action: () => {
+      window.open("http://127.0.0.1:5002/performance", "_blank");
+    }
+  },
+  {
+    title: "People and Process - GW Certified SDETs",
+    description: "Certified experts ensuring consistent, standards-driven automation.",
+    icon: <TeamOutlined style={{ fontSize: "30px", color: "#13c2c2" }} />,
+    bgImages: people,
+    action: () => {
+      window.open("http://127.0.0.1:5001", "_blank");
+      // Add your navigation logic here for this card
+    }
+  },
 ];
 
 const CardsWrapper = styled.div`
@@ -98,7 +110,8 @@ const Card = styled.div`
   background-position: center;
   border-radius: 6px;
   height: 390px;
-  width: 85%;
+  width: 100%;
+  max-width: 350px;
   position: relative;
   overflow: hidden;
   transition: all 0.3s ease;
@@ -116,24 +129,26 @@ const Overlay = styled.div`
   position: absolute;
   bottom: 0;
   width: 100%;
-  padding: 20px 16px 30px;
+  height:60%;
+  padding: 5px 16px 30px;
   text-align: center;
 `;
 
 const IconWrapper = styled.div`
-  background: #eef1f5;
+  background:rgb(190, 218, 255);
   border-radius: 50%;
-  width: 64px;
-  height: 64px;
+  width: 54px;
+  height: 54px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto 16px;
+  margin: 0 auto;
+  margin-bottom: 0px;
 `;
 
 const Title = styled.h3`
-  font-size: 18px;
-  font-weight: 600;
+  font-size: 16px;
+  font-weight: 700;
   margin-bottom: 12px;
   color: #2b2b2b;
 `;
@@ -141,7 +156,7 @@ const Title = styled.h3`
 const Description = styled.p`
   font-size: 14px;
   color: #5a5a5a;
-  margin-bottom: 20px;
+ 
 `;
 
 const ActionLink = styled.button`
@@ -152,6 +167,7 @@ const ActionLink = styled.button`
   border-radius: 4px;
   font-size: 14px;
   cursor: pointer;
+  margin-bottom: 20px;
   transition: all 0.3s ease;
 
   &:hover {
@@ -161,20 +177,20 @@ const ActionLink = styled.button`
 `;
 
 const SolutionCards = () => {
-    return (
-        <CardsWrapper>
-            {solutions.map((item, index) => (
-                <Card key={index} bg={bgImages[index % bgImages.length]}>
-                    <Overlay>
-                        <IconWrapper>{item.icon}</IconWrapper>
-                        <Title>{item.title}</Title>
-                        <Description>{item.description}</Description>
-                        <ActionLink onClick={item.action}>Click Here</ActionLink>
-                    </Overlay>
-                </Card>
-            ))}
-        </CardsWrapper>
-    );
+  return (
+    <CardsWrapper>
+      {solutions.map((item, index) => (
+        <Card key={index} bg={item.bgImages}>
+          <Overlay>
+            <IconWrapper>{item.icon}</IconWrapper>
+            <Title>{item.title}</Title>
+            <Description>{item.description}</Description>
+            <ActionLink onClick={item.action}>Click Here</ActionLink>
+          </Overlay>
+        </Card>
+      ))}
+    </CardsWrapper>
+  );
 };
 
 export default SolutionCards;
