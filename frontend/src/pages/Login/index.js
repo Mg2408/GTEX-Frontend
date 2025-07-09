@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { FaFacebookF, FaTwitter, FaGoogle } from 'react-icons/fa';
-import { Section } from '../../styles/pages/Login';
+import { Section } from '../../styles/pages/login';
 
 const Login = () => {
     const navigate = useNavigate();

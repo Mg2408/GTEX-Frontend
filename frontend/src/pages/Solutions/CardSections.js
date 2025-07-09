@@ -7,6 +7,7 @@ import {
   ThunderboltOutlined,    
   DashboardOutlined,      
   TeamOutlined,
+  ExperimentOutlined,
 } from "@ant-design/icons";
 import genai from "../../assets/images/GenAi.jpeg"
 import defectpattern from "../../assets/images/Defectpattern.jpeg"
@@ -14,6 +15,8 @@ import automation from "../../assets/images/Automation.png"
 import intelligence from "../../assets/images/Intellegent.jpeg"
 import performance from "../../assets/images/performance.jpeg"
 import people from "../../assets/images/people.jpeg"
+import requirements from "../../assets/images/requirements.jpg"
+import dashboard from "../../assets/images/dashboardbg2.jpg"
 
 // Background image URLs (replace with your actual image paths or imports)
 const bgImages = [
@@ -23,13 +26,15 @@ const bgImages = [
   intelligence,
   performance,
   people,
+  requirements,
+  dashboard
 
 ];
 
 const solutions = [
   {
-    title: "GenAI Based Requirements & G-Unit Tests",
-    description: "AI-powered requirements and auto-generated G-Unit tests for faster readiness.",
+    title: "GenAI Based G-Unit Tests",
+    description: "AI-powered requirements and auto-generated G-Unit tests for faster readiness",
     icon: <RobotOutlined style={{ fontSize: "30px", color: "#1890ff" }} />,
     bgImages: genai,
     action: () => {
@@ -46,17 +51,17 @@ const solutions = [
     }
   },
   {
-    title: "BDD Based Test Automation Framework",
-    description: "Pre-built BDD packs delivering rapid, scalable Guidewire automation",
-    icon: <CodeOutlined style={{ fontSize: "30px", color: "#faad14" }} />,
-    bgImages: automation,
+    title: "GenAI BDD Assistant",
+    description: "Automatically converts business requirements into structured BDD scenarios for rapid test automation",
+    icon: <ExperimentOutlined style={{ fontSize: "30px", color: "#faad14" }} />,
+    bgImages: requirements,
     action: () => {
       window.open("http://127.0.0.1:5002/jira", "_blank");
     }
   },
   {
     title: "Intelligent Regression",
-    description: "Targeted regression powered by business rule intelligence.",
+    description: "Targeted regression powered by business rule intelligence",
     icon: <ThunderboltOutlined style={{ fontSize: "30px", color: "#eb2f96" }} />,
     bgImages: intelligence,
     action: () => {
@@ -73,8 +78,8 @@ const solutions = [
     }
   },
   {
-    title: "People and Process - GW Certified SDETs",
-    description: "Certified experts ensuring consistent, standards-driven automation.",
+    title: "AI-Powered Test Data Creation",
+    description: "Smart test data generation tailored to business context, reducing manual effort and boosting coverage",
     icon: <TeamOutlined style={{ fontSize: "30px", color: "#13c2c2" }} />,
     bgImages: people,
     action: () => {
@@ -82,18 +87,74 @@ const solutions = [
       // Add your navigation logic here for this card
     }
   },
+   {
+    title: "Guidewire Test Automation Solution",
+    description: "Accelerate testing with a modular, enterprise-ready framework tailored for Guidewire",
+    icon: <CodeOutlined style={{ fontSize: "30px", color: "#faad14" }} />,
+    bgImages: automation,
+    action: () => {
+      window.open("https://www.exavalu.com/guidewire-test-automation-solution/", "_blank");
+    }
+  },
+   {
+    title: "Dashboard",
+    description: "A visual display of important information, metrics, and key performance indicators, designed to provide a quick overview of a specific area or process",
+    icon: <CodeOutlined style={{ fontSize: "30px", color: "#faad14" }} />,
+    bgImages: dashboard,
+    action: () => {
+      window.open("https://www.exavalu.com/guidewire-test-automation-solution/", "_blank");
+    }
+  },
 ];
 
 const CardsWrapper = styled.div`
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
   padding: 40px;
   background-image: url("images70.jpeg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+
+  @media (max-width: 992px) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+  }
+
+  @media (max-width: 600px) {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+`;
+
+const FirstRow = styled.div`
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
   justify-items: center;
+  width: 100%;
+  max-width: 1400px;
+
+  @media (max-width: 992px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr;
+  }
+`;
+
+const SecondRow = styled.div`
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  justify-items: center;
+  width: 100%;
+  max-width: 1400px;
 
   @media (max-width: 992px) {
     grid-template-columns: repeat(2, 1fr);
@@ -109,7 +170,7 @@ const Card = styled.div`
   background-size: cover;
   background-position: center;
   border-radius: 6px;
-  height: 390px;
+  height: 400px;
   width: 100%;
   max-width: 350px;
   position: relative;
@@ -129,35 +190,42 @@ const Overlay = styled.div`
   position: absolute;
   bottom: 0;
   width: 100%;
-  height:60%;
-  padding: 5px 16px 30px;
+  height: 60%;
+  padding: 16px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 `;
 
 const IconWrapper = styled.div`
-  background:rgb(190, 218, 255);
+  background: rgb(190, 218, 255);
   border-radius: 50%;
   width: 54px;
   height: 54px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto;
-  margin-bottom: 0px;
+  margin: 0 auto 0px;
+  flex-shrink: 0;
 `;
+
+
 
 const Title = styled.h3`
   font-size: 16px;
   font-weight: 700;
-  margin-bottom: 12px;
   color: #2b2b2b;
+  margin: 6px 0 8px;
 `;
 
 const Description = styled.p`
   font-size: 14px;
   color: #5a5a5a;
- 
+  margin: 5px 0;
 `;
+
 
 const ActionLink = styled.button`
   background: transparent;
@@ -167,7 +235,6 @@ const ActionLink = styled.button`
   border-radius: 4px;
   font-size: 14px;
   cursor: pointer;
-  margin-bottom: 20px;
   transition: all 0.3s ease;
 
   &:hover {
@@ -176,19 +243,39 @@ const ActionLink = styled.button`
   }
 `;
 
+
 const SolutionCards = () => {
+  // Split solutions into first 4 and remaining 3
+  const firstRowSolutions = solutions.slice(0, 4);
+  const secondRowSolutions = solutions.slice(4, 8);
+  
   return (
-    <CardsWrapper >
-      {solutions.map((item, index) => (
-        <Card key={index} bg={item.bgImages}>
-          <Overlay>
-            <IconWrapper>{item.icon}</IconWrapper>
-            <Title>{item.title}</Title>
-            <Description>{item.description}</Description>
-            <ActionLink onClick={item.action}>Click Here</ActionLink>
-          </Overlay>
-        </Card>
-      ))}
+    <CardsWrapper>
+      <FirstRow>
+        {firstRowSolutions.map((item, index) => (
+          <Card key={index} bg={item.bgImages}>
+            <Overlay>
+              <IconWrapper>{item.icon}</IconWrapper>
+              <Title>{item.title}</Title>
+              <Description>{item.description}</Description>
+              <ActionLink onClick={item.action}>Click Here</ActionLink>
+            </Overlay>
+          </Card>
+        ))}
+      </FirstRow>
+      
+      <SecondRow>
+        {secondRowSolutions.map((item, index) => (
+          <Card key={index + 4} bg={item.bgImages}>
+            <Overlay>
+              <IconWrapper>{item.icon}</IconWrapper>
+              <Title>{item.title}</Title>
+              <Description>{item.description}</Description>
+              <ActionLink onClick={item.action}>Click Here</ActionLink>
+            </Overlay>
+          </Card>
+        ))}
+      </SecondRow>
     </CardsWrapper>
   );
 };

@@ -1,7 +1,7 @@
 import { Col, Row } from 'antd';
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Container } from '../../styles/pages/Login';
+import { Container } from '../../styles/pages/login';
 import novoLogo from '../../assets/images/exavalu_white1.png';
 import { PrivateFooterbox } from '../../styles/components/Footer';
 import { LinkedinOutlined } from '@ant-design/icons';

@@ -30,7 +30,7 @@ import {
   AvatarStyle
 } from "../../../src/styles/components/Navbar/index";
 import { useNavigate } from "react-router-dom";
-import HomeIcon from "../../assets/svg/home";
+
 
 import {
   NotificationAlertStyle,
@@ -132,10 +132,7 @@ export default function PrivateNavbar() {
   )
 
   const menuItems = [
-    {
-      key: "home",
-      icon: <HomeIcon />,
-    },
+  
     {
       key: "dashboard",
 

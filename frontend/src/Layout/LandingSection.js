@@ -20,21 +20,16 @@ const LandingSection = () => {
       >
         {/* Left Text */}
         <div style={{ flex: 1 }}>
-          <h1
-            style={{
-              fontSize: "32px",
-              fontWeight: 700,
-              marginBottom: "10px",
-              lineHeight: "1.5",
-              color: "#1a1a1a",
-            }}
-          >
-            GT- EX
-            <br />
-            <span style={{ fontWeight: 600 }}>
+          <div style={{ marginBottom: "10px" }}>
+            <img
+              src="Gt-Exlogo.png"
+              alt="GT-EX Logo"
+              style={{ height: "60px", objectFit: "contain" }}
+            />
+            <div style={{ fontSize: "24px", fontWeight: 600, color: "#1a1a1a", marginTop: "8px" }}>
               Guidewire Testing - EXavalu
-            </span>
-          </h1>
+            </div>
+          </div>
           <p
             style={{
               fontSize: "22px",
