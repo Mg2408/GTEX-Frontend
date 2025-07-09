@@ -8,6 +8,8 @@ import {
   DashboardOutlined,      
   TeamOutlined,
   ExperimentOutlined,
+  FundOutlined
+  
 } from "@ant-design/icons";
 import genai from "../../assets/images/GenAi.jpeg"
 import defectpattern from "../../assets/images/Defectpattern.jpeg"
@@ -99,7 +101,7 @@ const solutions = [
    {
     title: "Dashboard",
     description: "A visual display of important information, metrics, and key performance indicators, designed to provide a quick overview of a specific area or process",
-    icon: <CodeOutlined style={{ fontSize: "30px", color: "#faad14" }} />,
+    icon: <FundOutlined style={{ fontSize: "30px", color: "blue" }} />,
     bgImages: dashboard,
     action: () => {
       window.open("https://www.exavalu.com/guidewire-test-automation-solution/", "_blank");
