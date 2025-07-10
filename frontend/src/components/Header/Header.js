@@ -130,13 +130,39 @@ export default function PrivateNavbar() {
       </Card>
     </div>
   )
+  const videoLinks = [
+    {
+      key: "Gen-AI BDD & Test Data Generator – Demo",
+      label: "Gen-AI BDD & Test Data Generator – Demo",
+      url: "https://exavalu.sharepoint.com/sites/ExavaluPractices-QualityEngineering2/_layouts/15/stream.aspx?id=%2Fsites%2FExavaluPractices%2DQualityEngineering2%2FShared%20Documents%2FSolution%20Assets%2FGen%20AI%2FBDD%20and%20Test%20Data%20Generator%20Demo%2Emp4&nav=eyJwbGF5YmFja09wdGlvbnMiOnt9LCJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbE1vZGUiOiJtaXMiLCJyZWZlcnJhbFZpZXciOiJwb3N0cm9sbC1jb3B5bGluayIsInJlZmVycmFsUGxheWJhY2tTZXNzaW9uSWQiOiI5ZWE1MGM0MS1hODUyLTQ2MzItYThlMi02NGMwZDZkMzlkYWUifX0&ct=1752133248994&or=Teams%2DHL&ga=1&LOF=1&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview%2E46b405bb%2D115a%2D49c8%2Da273%2Da1b054dc641b"
+    },
+    {
+      key: "Gen-AI Defect Pattern Analysis – Demo",
+      label: "Gen-AI Defect Pattern Analysis – Demo",
+      url: "https://exavalu.sharepoint.com/sites/ExavaluPractices-QualityEngineering2/_layouts/15/stream.aspx?id=%2Fsites%2FExavaluPractices%2DQualityEngineering2%2FShared%20Documents%2FSolution%20Assets%2FGen%20AI%2FDefect%20Pattern%20Analysis%5FV0%2E2%2Emp4&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview%2Ec8782042%2Dc5fe%2D4d6c%2D8740%2D3d3979d2075a&ga=1"
+    },
+    {
+      key: "Gen-AI GUnit - Demo",
+      label: "Gen-AI GUnit - Demo",
+      url: "https://exavalu.sharepoint.com/sites/Exavalu-KnowledgeRepositoryKREP/_layouts/15/stream.aspx?id=%2Fsites%2FExavalu%2DKnowledgeRepositoryKREP%2FShared%20Documents%2FGeneral%2FGuidewire%2FSoftwares%2FGen%5FAI%5FGUnits%2FRecording%2FGenAi%5FGunit%5FDemo%5Fv02%2Emp4&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview%2E5c3d3121%2D27b1%2D4bb7%2Da0f8%2De2d9f15ce7fb&ga=1"
+    },
+   
+  ];
 
   const menuItems = [
   
     {
       key: "dashboard",
 
-      label: "Demo/Videos"
+      label: "Demo/Videos",
+      children: videoLinks.map(video => ({
+        key: video.key,
+        label: video.label,
+        onClick: () => {
+          // Open video in new tab
+          window.open(video.url, '_blank');
+        }
+      }))
     },
     {
       key: "accountdashboard",
@@ -162,6 +188,12 @@ export default function PrivateNavbar() {
   const onClick = (e) => {
     console.log("click ", e);
     setCurrent(e.key);
+    // Handle video links
+    const videoLink = videoLinks.find(video => video.key === e.key);
+    if (videoLink) {
+      window.open(videoLink.url, '_blank');
+      return;
+    }
 
     if (e.key == 'dashboard' || e.key == 'home') {
       navigate('/');

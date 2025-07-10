@@ -100,7 +100,7 @@ const solutions = [
   },
    {
     title: "Dashboard",
-    description: "A visual display of important information, metrics, and key performance indicators, designed to provide a quick overview of a specific area or process",
+    description: "A visual display of important informations and designed to provide a quick overview of a specific area or process",
     icon: <FundOutlined style={{ fontSize: "30px", color: "blue" }} />,
     bgImages: dashboard,
     action: () => {
