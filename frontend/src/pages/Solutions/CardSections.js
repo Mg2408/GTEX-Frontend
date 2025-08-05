@@ -20,6 +20,9 @@ import people from "../../assets/images/people.jpeg"
 import requirements from "../../assets/images/requirements.jpg"
 import dashboard from "../../assets/images/dashboardbg2.jpg"
 
+
+const  backendHost = process.env.REACT_APP_BACKEND_HOST;
+
 // Background image URLs (replace with your actual image paths or imports)
 const bgImages = [
   genai,
@@ -40,7 +43,7 @@ const solutions = [
     icon: <RobotOutlined style={{ fontSize: "30px", color: "#1890ff" }} />,
     bgImages: genai,
     action: () => {
-      window.open("http://54.84.135.175:5001", "_blank");
+      window.open(`${backendHost}:5001`, "_blank");
     }
   },
   {
@@ -49,7 +52,7 @@ const solutions = [
     icon: <BugOutlined style={{ fontSize: "30px", color: "#52c41a" }} />,
     bgImages: defectpattern,
     action: () => {
-      window.open("http://54.84.135.175:5002/defect", "_blank");
+      window.open(`${backendHost}:5002/defect`, "_blank");
     }
   },
   {
@@ -58,7 +61,7 @@ const solutions = [
     icon: <ExperimentOutlined style={{ fontSize: "30px", color: "#faad14" }} />,
     bgImages: requirements,
     action: () => {
-      window.open("http://54.84.135.175:5002/jira", "_blank");
+      window.open(`${backendHost}:5002/jira`, "_blank");
     }
   },
   {
@@ -67,7 +70,7 @@ const solutions = [
     icon: <ThunderboltOutlined style={{ fontSize: "30px", color: "#eb2f96" }} />,
     bgImages: intelligence,
     action: () => {
-      window.open("http://54.84.135.175:5000", "_blank");
+      window.open(`${backendHost}:5000`, "_blank");
     }
   },
   {
@@ -76,7 +79,7 @@ const solutions = [
     icon: <DashboardOutlined style={{ fontSize: "30px", color: "#722ed1" }} />,
     bgImages: performance,
     action: () => {
-      window.open("http://54.84.135.175:5002/performance", "_blank");
+      window.open(`${backendHost}:5002/performance`, "_blank");
     }
   },
   {
@@ -85,7 +88,7 @@ const solutions = [
     icon: <TeamOutlined style={{ fontSize: "30px", color: "#13c2c2" }} />,
     bgImages: people,
     action: () => {
-      window.open("http://54.84.135.175:5002/test", "_blank");
+      window.open(`${backendHost}:5002/test`, "_blank");
       // Add your navigation logic here for this card
     }
   },
