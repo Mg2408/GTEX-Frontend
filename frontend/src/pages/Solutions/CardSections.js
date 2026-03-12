@@ -38,12 +38,32 @@ const bgImages = [
 
 const solutions = [
   {
-    title: "GenAI Based G-Unit Tests",
-    description: "AI-powered requirements and auto-generated G-Unit tests for faster readiness",
-    icon: <RobotOutlined style={{ fontSize: "30px", color: "#1890ff" }} />,
-    bgImages: genai,
+    title: "BDD Generator using File",
+    description: "Automatically convert user stories from an Excel file into structured BDD scenarios (Given-When-Then), helping QA teams quickly generate feature files and accelerate test design.",
+    icon: <TeamOutlined style={{ fontSize: "30px", color: "#13c2c2" }} />,
+    bgImages: people,
     action: () => {
-      window.open(`${backendHost}:5001`, "_blank");
+      window.open(`${backendHost}:5002/bddFile`, "_blank");
+      // Add your navigation logic here for this card
+    }
+  },
+  {
+    title: "AI-Powered Test Data Creation",
+    description: "Smart test data generation tailored to business context, reducing manual effort and boosting coverage",
+    icon: <TeamOutlined style={{ fontSize: "30px", color: "#13c2c2" }} />,
+    bgImages: people,
+    action: () => {
+      window.open(`${backendHost}:5002/test`, "_blank");
+      // Add your navigation logic here for this card
+    }
+  },
+  {
+    title: "GenAI BDD Assistant",
+    description: "Automatically converts business requirements into structured BDD scenarios for rapid test automation",
+    icon: <ExperimentOutlined style={{ fontSize: "30px", color: "#faad14" }} />,
+    bgImages: requirements,
+    action: () => {
+      window.open(`${backendHost}:5002/jira`, "_blank");
     }
   },
   {
@@ -56,12 +76,12 @@ const solutions = [
     }
   },
   {
-    title: "GenAI BDD Assistant",
-    description: "Automatically converts business requirements into structured BDD scenarios for rapid test automation",
-    icon: <ExperimentOutlined style={{ fontSize: "30px", color: "#faad14" }} />,
-    bgImages: requirements,
+    title: "GenAI Based G-Unit Tests",
+    description: "AI-powered requirements and auto-generated G-Unit tests for faster readiness",
+    icon: <RobotOutlined style={{ fontSize: "30px", color: "#1890ff" }} />,
+    bgImages: genai,
     action: () => {
-      window.open(`${backendHost}:5002/jira`, "_blank");
+      window.open(`${backendHost}:5001`, "_blank");
     }
   },
   {
@@ -80,16 +100,6 @@ const solutions = [
     bgImages: performance,
     action: () => {
       window.open(`${backendHost}:5002/performance`, "_blank");
-    }
-  },
-  {
-    title: "AI-Powered Test Data Creation",
-    description: "Smart test data generation tailored to business context, reducing manual effort and boosting coverage",
-    icon: <TeamOutlined style={{ fontSize: "30px", color: "#13c2c2" }} />,
-    bgImages: people,
-    action: () => {
-      window.open(`${backendHost}:5002/test`, "_blank");
-      // Add your navigation logic here for this card
     }
   },
    {
@@ -252,7 +262,7 @@ const ActionLink = styled.button`
 const SolutionCards = () => {
   // Split solutions into first 4 and remaining 3
   const firstRowSolutions = solutions.slice(0, 4);
-  const secondRowSolutions = solutions.slice(4, 8);
+  const secondRowSolutions = solutions.slice(4);
   
   return (
     <CardsWrapper>
