@@ -39,9 +39,9 @@ const bgImages = [
 const solutions = [
   {
     title: "BDD Generator using File",
-    description: "Automatically convert user stories from an Excel file into structured BDD scenarios (Given-When-Then), helping QA teams quickly generate feature files and accelerate test design.",
+    description: "Automatically convert user stories from an Excel file into structured BDD scenarios.",
     icon: <TeamOutlined style={{ fontSize: "30px", color: "#13c2c2" }} />,
-    bgImages: people,
+    bgImages: automation,
     action: () => {
       window.open(`${backendHost}:5002/bddFile`, "_blank");
       // Add your navigation logic here for this card
